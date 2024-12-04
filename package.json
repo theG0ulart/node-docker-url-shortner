@@ -1,0 +1,40 @@
+{
+  "name": "encurtarurl",
+  "version": "1.0.0",
+  "description": "Encurtador de URL com NodeJS + Typescript",
+  "main": "app.js",
+  "scripts": {
+    "build:watch": "tsc -w",
+    "migrate": "migrate-mongo up",
+    "start": "ts-node src/app.ts",
+    "build": "tsc",
+    "dev": "nodemon ./dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/migrate-mongo": "^10.0.5",
+    "@types/shortid": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "encurtarurl": "file:",
+    "express": "^4.21.1",
+    "migrate-mongo": "^11.0.0",
+    "mongoose": "^8.8.3",
+    "nodemon": "^3.1.7",
+    "shortid": "^2.2.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.17.0"
+  }
+}
