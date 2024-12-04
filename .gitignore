@@ -10,13 +10,6 @@ yarn.lock
 dist/
 *.tsbuildinfo
 
-# Docker
-docker-compose.override.yml
-docker-compose.yml
-Dockerfile
-.docker/
-*.docker/
-
 # Environment variables
 .env
 

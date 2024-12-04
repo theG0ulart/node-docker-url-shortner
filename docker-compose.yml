@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  node-app:
+    build: .
+    container_name: node-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo-db
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    networks:
+      - app-network
+
+  mongo-db:
+    image: mongo:latest
+    container_name: mongo-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    restart: always  # Certifique-se de que o MongoDB seja reiniciado se falhar
+
+networks:
+  app-network:
+    driver: bridge
